@@ -145,3 +145,9 @@ gems:
 #- jekyll-mentions
   - jekyll-sitemap
   - jekyll-feed
+
+title: Verne in GitHub
+description: Pages
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-hacker
