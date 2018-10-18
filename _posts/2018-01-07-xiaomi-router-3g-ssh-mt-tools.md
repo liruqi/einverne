@@ -13,7 +13,7 @@ last_updated:
 ## 小米路由器刷入开发版
 [下载](http://www1.miwifi.com/miwifi_download.html) 开发版，在后台点击上传安装开发版的bin，然后等待重启，完成开发版安装。
 
-## 小米路由器开始 SSH
+## 小米路由器开启 SSH
 小米帐号绑定小米路由器，设置路由器可正常上网，并使用手机版小米wifi绑定路由器，然后在绑定小米账号的前提下，进入 <https://d.miwifi.com/rom/ssh> 这个网站，下载对应路由器的工具包`miwifi_ssh.bin`（即使同一个型号的多个路由器，工具包文件内容也不一样）。然后找到 SSH 登录的 root 密码，之后会用到。
 
 > 工具包使用方法：小米路由器需升级到开发版0.5.28及以上，小米路由器mini需升级到开发版0.3.84及以上，小米路由器3即将支持。注意：稳定版不支持。
@@ -24,16 +24,18 @@ last_updated:
 
 如果Chrome浏览器出现错误提示："This site can’t be reached. d.miwifi.com refused to connect. ERR_CONNECTION_REFUSED"，需要手动将`http`替换为`https`。
 
+重启完成之后可以使用 `ssh root@192.168.31.1` 来连接路由器，使用之前获取的 SSH root 密码登录。
+
 ## 刷入 MT 工具箱
 MT工具箱是目前第三方插件里面最为方便易用的插件集合
 
 KMS 服务器，VSFTP 服务器，VPN 服务器，远程管理，ARIA2，Koolproxy广告过滤，阿呆喵广告过滤，Shadowsocks，webshell， frp 服务
 
-Misstar Tools 2.0工具箱安装，经过上面的几个步骤，开启 SSH 之后，使用 `ssh root@192.168.31.1` 来连接路由器，使用之前获取的 SSH root 密码登录，进去之后 `passwd` 修改 root 密码，以方便下一次使用，然后直接执行如下代码，就能安装 MT 工具箱。
+Misstar Tools 2.0工具箱安装，经过上面的几个步骤，SSH 登录之后执行如下代码，安装 MT 工具箱：
 
     wget http://www.misstar.com/tools/appstore/install.sh -O /tmp/install.sh && chmod a+x /tmp/install.sh && /tmp/install.sh 
 
-卸载
+卸载：
 
     sh -x etc/misstar/scripts/uninstall.sh
 
