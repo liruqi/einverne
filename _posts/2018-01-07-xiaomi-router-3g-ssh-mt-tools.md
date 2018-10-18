@@ -26,12 +26,27 @@ last_updated:
 
 重启完成之后可以使用 `ssh root@192.168.31.1` 来连接路由器，使用之前获取的 SSH root 密码登录。
 
+下面从 Monlor 和 Misstar Tools 两者中选择一个工具箱来完成 Shadowsocks 的安装。
+
+## 输入 Monlor 工具箱
+[Monlor](https://github.com/monlor/Monlor-Tools) 是我自用的工具箱，亲测可用。
+
+SSH 登录之后执行如下代码，安装 Monlor 工具箱：
+
+    sh -c "$(curl -kfsSl https://coding.net/u/monlor/p/Monlor-Tools/git/raw/master/install.sh)" && source /etc/profile &> /dev/null
+
+初始化：
+
+    init.sh 
+
+然后执行`monlor`，进入命令行交互界面进行 Shadowsocks 服务的安装和配置。配置完成之后可以在路由器管理界面控制 Shadowsocks 服务。
+
 ## 刷入 MT 工具箱
 MT工具箱是目前第三方插件里面最为方便易用的插件集合
 
 KMS 服务器，VSFTP 服务器，VPN 服务器，远程管理，ARIA2，Koolproxy广告过滤，阿呆喵广告过滤，Shadowsocks，webshell， frp 服务
 
-Misstar Tools 2.0工具箱安装，经过上面的几个步骤，SSH 登录之后执行如下代码，安装 MT 工具箱：
+SSH 登录之后执行如下代码，安装 Misstar Tools 2.0工具箱：
 
     wget http://www.misstar.com/tools/appstore/install.sh -O /tmp/install.sh && chmod a+x /tmp/install.sh && /tmp/install.sh 
 
@@ -39,9 +54,7 @@ Misstar Tools 2.0工具箱安装，经过上面的几个步骤，SSH 登录之�
 
     sh -x etc/misstar/scripts/uninstall.sh
 
-## 安装 Shadowsocks 科学上网插件的方法
-
-在开启 SSH，并且安装 Misstar Tools 工具箱的前提下，有两种方法可以安装 Shadowsocks 插件，第一种就是使用备份的文件，传入路由器之后运行安装，第二种直接在安装页面修改页面内容，推荐使用第二种方法。
+安装 Misstar Tools 之后，有两种方法可以安装 Shadowsocks 插件，第一种就是使用备份的文件，传入路由器之后运行安装，第二种直接在安装页面修改页面内容，推荐使用第二种方法。
 
 ### 方法一：使用文件安装
 
@@ -132,3 +145,4 @@ U盘一般是/extdisks/开头，后面的可能不一样，我的是：/extdisks
 - <http://www.miui.com/thread-7520321-1-2.html>
 - <https://blog.digua.co/post/105/mi-r3g-chinatelecom-padavan>
 - <http://tw.miui.com/thread-31394-1-1.html>
+- <http://zh.roomchat.im/index.php?title=Category:%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6/Monlor>
