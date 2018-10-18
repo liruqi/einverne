@@ -35,7 +35,7 @@ Misstar Tools 2.0工具箱安装，经过上面的几个步骤，开启 SSH 之�
 
 卸载
 
-    wget http://www.misstar.com/tools/uninstall.sh -O /tmp/uninstall.sh && chmod +x /tmp/uninstall.sh && /tmp/uninstall.sh
+    sh -x etc/misstar/scripts/uninstall.sh
 
 ## 安装 Shadowsocks 科学上网插件的方法
 
