@@ -11,7 +11,7 @@ last_updated:
 下面是小米路由器折腾记录，包括开启 SSH，然后安装 MT 工具箱，主要是为了其中的两个插件，一个是去广告，一个是SS代理，不过附带竟然发现了 frp 插件，开心啊。下面就是具体的记录。
 
 ## 小米路由器刷入开发版
-[下载](http://www1.miwifi.com/miwifi_download.html) 开发版，在后台点击上传安装开发版的bin，然后等待重启，完成开发版安装。
+[下载](http://www1.miwifi.com/miwifi_download.html) [ROM for R3G 开发版](http://bigota.miwifi.com/xiaoqiang/rom/r3g/miwifi_r3g_firmware_c2175_2.25.122.bin)，在后台点击上传安装开发版的bin，然后等待重启，完成开发版安装。
 
 ## 小米路由器开启 SSH
 小米帐号绑定小米路由器，设置路由器可正常上网，并使用手机版小米wifi绑定路由器，然后在绑定小米账号的前提下，进入 <https://d.miwifi.com/rom/ssh> 这个网站，下载对应路由器的工具包`miwifi_ssh.bin`（即使同一个型号的多个路由器，工具包文件内容也不一样）。然后找到 SSH 登录的 root 密码，之后会用到。
